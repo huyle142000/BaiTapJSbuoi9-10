@@ -1,0 +1,81 @@
+.sp-thongbao {
+  color: red;
+  margin-left: 2px;
+  display: none;
+}
+
+#SapXepGiam {
+  display: none;
+}
+
+#content {
+  width: 100%;
+  background: #74ebd5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ACB6E5, #74ebd5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.myCardHeader,
+.myCardFooter {
+  background-color: transparent;
+}
+
+.btn-Update {
+  display: none;
+}
+
+.modal.fade {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+
+}
+
+#myModal.modal.fade.show {
+  display: block;
+  transition: all .5s ease-in-out;
+  background-color: #00000063;
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInDownClone linear 0.5s;
+
+}
+
+@keyframes fadeInDownClone {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.invalid input {
+  border-color: red;
+}
+
+.invalid .sp-thongbao {
+  color: red;
+  display: block;
+}
+
+.input-group {
+  align-items: center;
+}
+
+.input-group .fa-eye {
+  display: none;
+}
+
+.input-group.show-password .fa-eye-slash {
+  display: none;
+}
+.input-group.show-password .fa-eye {
+  display: block;
+}
