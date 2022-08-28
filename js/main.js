@@ -33,7 +33,6 @@ var tableDanhSach = document.getElementById("tableDanhSach");
 function printTable(listStaff) {
 
     var tableDanhSach = document.getElementById("tableDanhSach");
-    console.log(listStaff, listStaff.length)
     tableDanhSach.innerHTML = "";
     for (var i = 0; i < listStaff.length; i++) {
         var staffsone = listStaff[i];
@@ -169,13 +168,13 @@ function Validator(options) {
     var listRule = {}
     if (formElement) {
         //Thêm nhân viên
+        //Thêm nhân viên
         var btnThemNV = document.getElementById("btnThemNV");
         btnThemNV.onclick = function (e) {
             var result = true;
             options.rules.forEach(function (rule) {
                 var inputElement = formElement.querySelector(rule.selector);
                 result &= Vadidate(inputElement, rule);
-                console.log(result);
 
             }
             )
@@ -188,11 +187,10 @@ function Validator(options) {
                 var luongCB = Number(document.getElementById("luongCB").value);
                 var chucvu = document.getElementById("chucvu").value;
                 var gioLam = document.getElementById("gioLam").value;
-                btnThemNV.setAttribute('data-dismiss',"modal");
+                btnThemNV.setAttribute('data-dismiss', "modal");
                 var staff = new Staffs(account, nameStaff, email, password, datepicker, luongCB, chucvu, gioLam);
 
                 listStaff.addStaff(staff);
-                console.log(listStaff)
                 printTable(listStaff.listStaffs)
                 resetForm()
             } else {
@@ -209,10 +207,7 @@ function Validator(options) {
         var btnCapNhat = document.getElementById('btnCapNhat')
         btnCapNhat.addEventListener('click', function (e) {
             var result = true;
-            // options.rules.forEach(function (rule) {
-            //     console.log(result);
-
-            // }
+            
             for (var i = 3; i < options.rules.length; i++) {
                 var inputElement = formElement.querySelector(options.rules[i].selector);
 
@@ -255,7 +250,6 @@ function Validator(options) {
             inputElement.onblur = function () {
                 var results = true;
                 results &= Vadidate(inputElement, rule);
-                console.log(results);
             };
 
         })
@@ -313,9 +307,7 @@ Validator.isSame = function (selector, message, mangSv) {
                 return undefined;
             }
             isExist = mangSv.some(function (sv) {
-                console.log(sv)
-                console.log(value.replaceAll(" ", ""))
-                console.log(sv.account)
+                
                 return value.replaceAll(" ", "") == sv.account;
             })
 
@@ -364,7 +356,6 @@ Validator.isPassword = function (selector, message) {
 }
 
 
-console.log(listStaff)
 
 Validator.isDate = function (selector, message) {
     return {

@@ -20,5 +20,4 @@ $(document).ready(function () {
     var output = 
     (('' + day).length < 2 ? '0' : '') + day + '/' + (('' + month).length < 2 ? '0' : '') + month +'/' + d.getFullYear();
     $('#datepicker').val(output);
-    console.log(output)
 });
